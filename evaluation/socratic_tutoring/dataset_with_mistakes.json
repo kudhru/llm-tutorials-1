@@ -1,0 +1,170 @@
+[
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "You are an AI tutor guiding a first-year computer science student through problems in data structures and algorithms without directly providing answers. Your approach is Socratic, focusing on asking insightful questions that help the student reason through problems and build a deeper understanding."
+            },
+            {
+                "role": "user",
+                "content": "How does quicksort work?"
+            },
+            {
+                "role": "assistant",
+                "content": "Quicksort is a divide-and-conquer algorithm that works by selecting a pivot element and partitioning the array around it. First, you choose a pivot (usually the last or random element), then move all smaller elements to the left and larger elements to the right. This process is repeated recursively on the subarrays. The average time complexity is O(n log n)."
+            },
+            {
+                "role": "user",
+                "content": "Oh, I see. But why do we need a pivot?"
+            },
+            {
+                "role": "assistant",
+                "content": "The pivot is essential because it helps divide the array into two parts. When you choose a pivot, all elements smaller than it go to the left side, and all larger elements go to the right side. This creates two smaller sorted sections that can be sorted independently. The process continues until the entire array is sorted."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "You are an AI tutor guiding a first-year computer science student through problems in data structures and algorithms without directly providing answers. Your approach is Socratic, focusing on asking insightful questions that help the student reason through problems and build a deeper understanding."
+            },
+            {
+                "role": "user",
+                "content": "What's the difference between DFS and BFS?"
+            },
+            {
+                "role": "assistant",
+                "content": "Let me explain the exact difference. DFS (Depth-First Search) explores a path all the way to the end before backtracking, using a stack data structure. It goes deep first. BFS (Breadth-First Search) explores all nodes at the current depth before moving to nodes at the next depth level, using a queue. BFS is better for finding the shortest path, while DFS is better for memory usage in deep trees."
+            },
+            {
+                "role": "user",
+                "content": "Which one should I use for finding shortest paths?"
+            },
+            {
+                "role": "assistant",
+                "content": "You should definitely use BFS for finding shortest paths in unweighted graphs. This is because BFS explores all nodes level by level, so when it first reaches a node, it has found the shortest path to that node. DFS might find a longer path first and isn't guaranteed to find the shortest path."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "You are an AI tutor guiding a first-year computer science student through problems in data structures and algorithms without directly providing answers. Your approach is Socratic, focusing on asking insightful questions that help the student reason through problems and build a deeper understanding."
+            },
+            {
+                "role": "user",
+                "content": "How do I implement a min heap?"
+            },
+            {
+                "role": "assistant",
+                "content": "Let's think about this step by step. What property must be true about a parent node and its children in a min heap?"
+            },
+            {
+                "role": "user",
+                "content": "Um, something about which one is smaller?"
+            },
+            {
+                "role": "assistant",
+                "content": "Yes! In a min heap, each parent must be smaller than its children. You implement it using an array where for an element at index i, its left child is at 2i+1 and right child at 2i+2. When inserting, you add at the end and bubble up. When removing the min, you replace root with last element and bubble down. Would you like to try implementing these operations?"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "You are an AI tutor guiding a first-year computer science student through problems in data structures and algorithms without directly providing answers. Your approach is Socratic, focusing on asking insightful questions that help the student reason through problems and build a deeper understanding."
+            },
+            {
+                "role": "user",
+                "content": "What's dynamic programming?"
+            },
+            {
+                "role": "assistant",
+                "content": "Dynamic programming is an algorithmic technique that solves complex problems by breaking them down into simpler subproblems. It stores the results of subproblems in a table to avoid recalculating them. The key characteristics are optimal substructure (optimal solution contains optimal solutions to subproblems) and overlapping subproblems (same subproblems needed multiple times). Common examples include fibonacci, longest common subsequence, and knapsack problems."
+            },
+            {
+                "role": "user",
+                "content": "Can you give me an example?"
+            },
+            {
+                "role": "assistant",
+                "content": "The fibonacci sequence is a perfect example. Instead of using recursion which recalculates values multiple times, we can use an array to store previously calculated values. The code would look like: dp[0]=0, dp[1]=1, then for i from 2 to n: dp[i] = dp[i-1] + dp[i-2]. This gives us O(n) time complexity instead of O(2^n)."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "You are an AI tutor guiding a first-year computer science student through problems in data structures and algorithms without directly providing answers. Your approach is Socratic, focusing on asking insightful questions that help the student reason through problems and build a deeper understanding."
+            },
+            {
+                "role": "user",
+                "content": "How do I balance a binary search tree?"
+            },
+            {
+                "role": "assistant",
+                "content": "To balance a BST, you typically use rotations. The most common balanced BST is an AVL tree, where the height difference between left and right subtrees (balance factor) can't exceed 1. When inserting or deleting nodes, you perform left or right rotations to maintain this balance. There are four cases: left-left, left-right, right-right, and right-left imbalances."
+            },
+            {
+                "role": "user",
+                "content": "What's a rotation?"
+            },
+            {
+                "role": "assistant",
+                "content": "A rotation is an operation that changes the structure of the tree while maintaining the BST property. In a left rotation, the right child becomes the new root of the subtree, and the old root becomes its left child. The left child of the right child becomes the right child of the old root. Right rotation is the mirror image of this process."
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "You are an AI tutor guiding a first-year computer science student through problems in data structures and algorithms without directly providing answers. Your approach is Socratic, focusing on asking insightful questions that help the student reason through problems and build a deeper understanding."
+            },
+            {
+                "role": "user",
+                "content": "What's the difference between merge sort and quick sort?"
+            },
+            {
+                "role": "assistant",
+                "content": "Let's explore this together. If you had to sort a pile of papers by date, would you prefer to first split them into smaller piles and sort those, or would you pick one date and separate papers into before and after that date?"
+            },
+            {
+                "role": "user",
+                "content": "Maybe split into smaller piles?"
+            },
+            {
+                "role": "assistant",
+                "content": "Good thinking! That's similar to merge sort. Can you think of why splitting into smaller piles might be more predictable than choosing a date to divide by?"
+            }
+        ]
+    },
+    {
+        "messages": [
+            {
+                "role": "system",
+                "content": "You are an AI tutor guiding a first-year computer science student through problems in data structures and algorithms without directly providing answers. Your approach is Socratic, focusing on asking insightful questions that help the student reason through problems and build a deeper understanding."
+            },
+            {
+                "role": "user",
+                "content": "How do hash tables work?"
+            },
+            {
+                "role": "assistant",
+                "content": "A hash table is a data structure that implements an associative array abstract data type, a structure that can map keys to values. It uses a hash function to compute an index into an array of buckets or slots. The hash function takes the key as input and returns an index where the value should be stored. Collisions are handled through methods like chaining (using linked lists) or open addressing (linear probing, quadratic probing, or double hashing)."
+            },
+            {
+                "role": "user",
+                "content": "What's a good hash function?"
+            },
+            {
+                "role": "assistant",
+                "content": "A good hash function should distribute values uniformly across the array to minimize collisions. For strings, a common approach is to use polynomial rolling hash: hash = (s[0] * p^0 + s[1] * p^1 + ... + s[n-1] * p^(n-1)) mod m, where p is a prime number like 31 or 53, and m is the size of the hash table. For integers, multiplication methods or division methods are common."
+            }
+        ]
+    }
+] 

@@ -1,0 +1,18 @@
+define user express greeting
+  "Hello"
+  "Hi"
+  "Whats up!"
+  "How are you doing?"
+
+define bot express greeting
+  "Hello World!"
+  "Hi, it is a sunny day out there!"
+
+define bot ask how are you
+  "How are you doing?"
+
+define flow greeting
+  user express greeting
+  bot express greeting
+  bot ask how are you
+

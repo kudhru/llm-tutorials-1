@@ -1,0 +1,8 @@
+openai
+langchain
+jupyter
+python-dotenv
+langchain-community
+langchain-openai
+nemoguardrails
+pandas
